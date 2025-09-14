@@ -4,7 +4,7 @@
   "version": "1.0",
 
   "description": "Automatically skips through the GMU Information Release page whenever you login to something.",
-
+  "homepage_url": "https://github.com/KellanClark/stopaskinggmu",
   "icons": {
     "16": "icons/stopaskinggmu-16.png",
     "32": "icons/stopaskinggmu-32.png",
@@ -20,5 +20,12 @@
       "matches": ["*://shibboleth.gmu.edu/idp/profile/SAML2/Redirect/SSO*"],
       "js": ["stopaskinggmu.js"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@stopaskinggmu.kellanclark"
+    }
+  }
+
 }
