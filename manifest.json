@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "StopAskingGMU",
+  "version": "1.0",
+
+  "description": "Automatically skips through the GMU Information Release page whenever you login to something.",
+
+  "icons": {
+    "16": "icons/stopaskinggmu-16.png",
+    "32": "icons/stopaskinggmu-32.png",
+    "48": "icons/stopaskinggmu-48.png",
+    "64": "icons/stopaskinggmu-64.png",
+    "128": "icons/stopaskinggmu-128.png"
+  },
+
+  "permissions": ["activeTab"],
+
+  "content_scripts": [
+    {
+      "matches": ["*://shibboleth.gmu.edu/idp/profile/SAML2/Redirect/SSO*"],
+      "js": ["stopaskinggmu.js"]
+    }
+  ]
+}
