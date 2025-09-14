@@ -1,4 +1,4 @@
-# Stop Asking GMU
+# StopAskingGMU
 Hey GMU students! Are you tired of having to click that "do not ask again" button every time you log in to something only for it to forget instantly? Well not any more. This is a tiny extension that automatically clicks past that page for you, selecting "do not ask again" just in case. The code is very short, simple, and fully open-source, so even non-programmers can see that I'm not trying to steal your information.
 
 ## Installation in Chrome/Edge
