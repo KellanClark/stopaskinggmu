@@ -31,4 +31,5 @@ jobs:
         prerelease: true
         name: "Firefox Extension File"
         files: |
-          stopaskinggmu.xpi
+          web-ext-artifacts/stopaskinggmu.xpi
+
