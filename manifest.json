@@ -1,10 +1,15 @@
 {
   "manifest_version": 3,
   "name": "StopAskingGMU",
-  "version": "1.1",
+  "version": "1.2",
 
   "description": "Automatically skips through the GMU Information Release page whenever you login to something.",
+  "author": "Kellan Clark",
   "homepage_url": "https://github.com/KellanClark/stopaskinggmu",
+  "developer": {
+    "name": "Kellan Clark",
+    "url": "https://github.com/KellanClark/stopaskinggmu"
+  },
   "icons": {
     "16": "icons/stopaskinggmu-16.png",
     "32": "icons/stopaskinggmu-32.png",
@@ -13,14 +18,23 @@
     "128": "icons/stopaskinggmu-128.png"
   },
 
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
 
   "content_scripts": [
     {
-      "matches": ["*://shibboleth.gmu.edu/idp/profile/SAML2/Redirect/SSO*"],
+      "matches": [
+        "*://shibboleth.gmu.edu/idp/profile/SAML2/Redirect/SSO*",
+        "*://info.canvas.gmu.edu/",
+        "*://outlook.office.com/mail/inbox/*",
+        "*://api-eb2b2949.duosecurity.com/frame/v4/auth/prompt*"
+      ],
       "js": ["stopaskinggmu.js"]
     }
   ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
 
   "browser_specific_settings": {
     "gecko": {

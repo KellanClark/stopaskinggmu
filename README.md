@@ -1,11 +1,19 @@
 # StopAskingGMU
-Hey GMU students! Are you tired of having to click that "do not ask again" button every time you log in to something only for it to forget instantly? Well not any more. This is a tiny extension that automatically clicks past that page for you, selecting "do not ask again" just in case. The code is very short, simple, and fully open-source, so even non-programmers can see that I'm not trying to steal your information.
+Hey, GMU students! Are you tired of constantly clicking buttons that never remember your choices? Well not any more! This little extension automates all the little things that annoy me, and I hope it can help you too. The code is open-source and doesn't send any data over the internet, so you can verify for yourself that it's completely safe.
 
 [Install in Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/stopaskinggmu/memjepmledaojhndmlkcjopkikmlokpb)
 
 [Install in Firefox](https://addons.mozilla.org/en-US/firefox/addon/stopaskinggmu/)
 
 ###### (There are no plans to put this on the Chrome store because of the registration fee. Please see the manual installation instructions below.)
+
+## Features
+- A settings UI that lets you enable, disable, and configure every feature
+- Automatically select an option on the Information Release page
+- Skip the Information Release page page entirely
+- Skip the page with the big "Log Into Canvas" button
+- Automatically re-login to Outlook when it's been too long and the red warning appears
+- Skip the Duo "Is this your device?" prompt
 
 ## Manual Installation
 ### Chrome/Edge

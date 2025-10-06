@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			section {
+				background-color: LightGray;
+				margin: 3px;
+				border-style: outset;
+				border-width: 2px;
+				border-radius: 5px;
+				padding: 4px;
+			}
+
+			.indent {
+				margin-left: 25px;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+
+			button {
+				text-align: center;
+				font-size: large;
+				font-weight: 500;
+
+				margin: 3px;
+				border-width: 1px;
+				border-radius: 5px;
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body style="font-family:sans-serif">
+		<center>
+			<img src="icons/stopaskinggmu-64.png" alt="StopAskingGMU Logo">
+			<h1 style="margin-top:5px;color:green">Stop<span style="color:gold">Asking</span>GMU</h1>
+		</center>
+
+		<form>
+			<section>
+				<input type="checkbox" id="enInfoRelease">
+				<label for="enInfoRelease">Enable Information Release Automation</label><br>
+				<div class="indent">
+					Default Option:
+					<br>
+					<input type="radio" name="askType" id="irAlwaysAsk" value="alwaysAsk">
+					<label for="irAlwaysAsk">Ask again</label><br>
+					<input type="radio" name="askType" id="irSometimesAsk" value="sometimesAsk">
+					<label for="irSometimesAsk">Ask if information changes</label><br>
+					<input type="radio" name="askType" id="irNeverAsk" value="neverAsk">
+					<label for="irNeverAsk">Do not ask again</label><br>
+					<input type="checkbox" id="enInfoReleaseAutoaccept">
+					<label for="enInfoReleaseAutoaccept">Automatically click the Accept button</label><br>
+				</div>
+			</section>
+
+			<section>
+				<input type="checkbox" id="enCanvasLogin">
+				<label for="enCanvasLogin">Skip Canvas Log In Request</label><br>
+			</section>
+
+			<section>
+				<input type="checkbox" id="enOutlookLogin">
+				<label for="enOutlookLogin">Skip Outlook Re-Sign In Prompt</label><br>
+			</section>
+
+			<section>
+				<input type="checkbox" id="enDuoDevice">
+				<label for="enDuoDevice">Skip Duo Device Prompt</label><br>
+				<div class="indent">
+					<input type="radio" name="duoDeviceSelection" id="ddIsMyDevice" value="isMyDevice">
+					<label for="ddIsMyDevice">This is my device</label><br>
+					<input type="radio" name="duoDeviceSelection" id="ddNotMyDevice" value="notMyDevice">
+					<label for="ddNotMyDevice">Other people use this device</label><br>
+				</div>
+			</section>
+
+			<section style="visibility:hidden"></section> <!-- Little hack to create a spacer -->
+			<button type=submit>Save Options</button>
+		</form>
+
+		<script src="popup.js"></script>
+	</body>
+</html>
