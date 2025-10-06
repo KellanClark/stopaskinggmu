@@ -28,8 +28,9 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: "latest"
-        prerelease: true
+        prerelease: false
         name: "Firefox Extension File"
         files: |
           web-ext-artifacts/stopaskinggmu.xpi
+
 
