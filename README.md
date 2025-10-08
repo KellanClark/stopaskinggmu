@@ -1,7 +1,7 @@
 # StopAskingGMU
 Hey, GMU students! Are you tired of constantly clicking buttons that never remember your choices? Well not any more! This little extension automates all the little things that annoy me, and I hope it can help you too. The code is open-source and doesn't send any data over the internet, so you can verify for yourself that it's completely safe.
 
-[Install in Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/stopaskinggmu/memjepmledaojhndmlkcjopkikmlokpb)
+[<img src="images/English_Get it from Microsoft Edge.png">](https://microsoftedge.microsoft.com/addons/detail/stopaskinggmu/memjepmledaojhndmlkcjopkikmlokpb)
 
 [Install in Firefox](https://addons.mozilla.org/en-US/firefox/addon/stopaskinggmu/)
 
