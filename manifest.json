@@ -3,7 +3,7 @@
   "name": "StopAskingGMU",
   "version": "1.2",
 
-  "description": "Automatically skips through the GMU Information Release page whenever you login to something.",
+  "description": "A set of QoL automations to make life easier for GMU students. ",
   "author": "Kellan Clark",
   "homepage_url": "https://github.com/KellanClark/stopaskinggmu",
   "developer": {
