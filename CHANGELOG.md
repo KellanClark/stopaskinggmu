@@ -1,5 +1,6 @@
 ## Version 1.3 (beta)
 - Removed everything to do with the information release page
+- Fixed Chrome support
 
 ## Version 1.2
 - Created a Settings UI

@@ -9,8 +9,6 @@ Hey, GMU students! Are you tired of constantly clicking buttons that never remem
 
 ## Features
 - A settings UI that lets you enable, disable, and configure every feature
-- Automatically select an option on the Information Release page
-- Skip the Information Release page page entirely
 - Skip the page with the big "Log Into Canvas" button
 - Automatically re-login to Outlook when it's been too long and the red warning appears
 - Skip the Duo "Is this your device?" prompt
