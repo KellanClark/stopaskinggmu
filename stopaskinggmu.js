@@ -1,3 +1,7 @@
+// Chrome uses `chrome.` instead of `browser.` for everything
+// Thanks to @sakgoyal for the fix
+var browser = browser || chrome;
+
 // Retrieve settings from browser storage and set default values
 let gettingItem = browser.storage.sync.get({
 	enCanvasLogin: true,

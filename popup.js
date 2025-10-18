@@ -1,6 +1,8 @@
 // There's a lot of JS features in here that I've never heard of
 // I'll try to be liberal with comments and explain all of them
 
+var browser = browser || chrome; // Fix for Chrome
+
 async function saveOptions(e) {
 	// Tells the browser that this event is being entirely handled by our code
 	e.preventDefault();
