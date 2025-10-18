@@ -1,8 +1,5 @@
 // Retrieve settings from browser storage and set default values
 let gettingItem = browser.storage.sync.get({
-	enInfoRelease: true,
-	askType: "neverAsk",
-	enInfoReleaseAutoaccept: true,
 	enCanvasLogin: true,
 	enOutlookLogin: true,
 	enDuoDevice: true,
@@ -12,28 +9,6 @@ gettingItem.then(onGot);
 
 // The .get function is asynchronous, so the body of the extension must be in this function
 function onGot(settings) {
-	// Information Release page
-	if (settings.enInfoRelease && document.title == "Information Release") {
-		// Select one of the three options based on what was chosen in settings
-		switch (settings.askType) {
-			case "alwaysAsk": // Select "Ask me again at next login"
-				document.getElementById("_shib_idp_doNotRememberConsent").click();
-				break;
-			case "sometimesAsk": // Select "Ask me again if information to be provided to this service changes"
-				document.getElementById("_shib_idp_rememberConsent").click();
-				break;
-			case "neverAsk": // Select "Do not ask me again"
-				document.getElementById("_shib_idp_globalConsent").click();
-				break;
-		}
-
-		// Click "Accept" button
-		if (settings.enInfoReleaseAutoaccept) {
-			document.getElementsByName("_eventId_proceed")[0].click();
-		}
-	}
-
-
 	// The page that asks you to log into Canvas
 	if (settings.enCanvasLogin && document.title == "Canvas Login") {
 		// Redirect to the actual login page

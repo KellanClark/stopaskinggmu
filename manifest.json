@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "StopAskingGMU",
-  "version": "1.2",
+  "version": "1.3beta",
 
   "description": "A set of QoL automations to make life easier for GMU students. ",
   "author": "Kellan Clark",
@@ -19,7 +19,6 @@
   "content_scripts": [
     {
       "matches": [
-        "*://shibboleth.gmu.edu/idp/profile/SAML2/Redirect/SSO*",
         "*://info.canvas.gmu.edu/",
         "*://outlook.office.com/mail/inbox/*",
         "*://api-eb2b2949.duosecurity.com/frame/v4/auth/prompt*"

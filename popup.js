@@ -8,9 +8,6 @@ async function saveOptions(e) {
 	// Takes a bunch of key-value pairs and stores/updates their value in browser storage
 	// storage.sync is like local storage except it gets synced with other instances of the browser, meaning settings can be shared across devices
 	await browser.storage.sync.set({
-		enInfoRelease: document.querySelector("#enInfoRelease").checked, // Read checkbox status
-		askType: document.querySelector('input[name="askType"]:checked').value, // Read radio button status
-		enInfoReleaseAutoaccept: document.querySelector("#enInfoReleaseAutoaccept").checked,
 		enCanvasLogin: document.querySelector("#enCanvasLogin").checked,
 		enOutlookLogin: document.querySelector("#enOutlookLogin").checked,
 		enDuoDevice: document.querySelector("#enDuoDevice").checked,
@@ -21,29 +18,20 @@ async function saveOptions(e) {
 async function restoreOptions() {
 	// Read all the keys in storage.sync and give them default values if they're unset
 	let res = await browser.storage.sync.get({
-		enInfoRelease: true,
-		askType: "neverAsk",
-		enInfoReleaseAutoaccept: true,
 		enCanvasLogin: true,
 		enOutlookLogin: true,
 		enDuoDevice: true,
 		duoDeviceSelection: "isMyDevice"
 	});
 
-	// Sets the checkbox to the value of enInfoRelease in storage
-	document.querySelector("#enInfoRelease").checked = res.enInfoRelease;
-	// Sets the radio button whos value matches askType
-	// I can't find a "real" way to do this, so take my crappy attempt at JS
-	document.getElementsByName("askType").forEach((button, i) => {
-		button.checked = button.value == res.askType;
-	});
-	document.querySelector("#enInfoReleaseAutoaccept").checked = res.enInfoReleaseAutoaccept;
-
+	// Sets the checkbox to the value of enCanvasLogin in storage
 	document.querySelector("#enCanvasLogin").checked = res.enCanvasLogin;
 
 	document.querySelector("#enOutlookLogin").checked = res.enOutlookLogin;
 
 	document.querySelector("#enDuoDevice").checked = res.enDuoDevice;
+	// Sets the radio button whos value matches duoDeviceSelection
+	// I can't find a "real" way to do this, so take my crappy attempt at JS
 	document.getElementsByName("duoDeviceSelection").forEach((button, i) => {
 		button.checked = button.value == res.duoDeviceSelection;
 	});

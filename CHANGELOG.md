@@ -1,8 +1,5 @@
-## Version 1.0
-- Initial Commit
-
-## Version 1.1
-- Metadata update for Firefox store
+## Version 1.3 (beta)
+- Removed everything to do with the information release page
 
 ## Version 1.2
 - Created a Settings UI
@@ -11,3 +8,9 @@
 - Added feature to re-login to Outlook when it's been too long
 - Added feature to skip the Duo your device prompt
 - Add name and URL to metadata
+
+## Version 1.1
+- Metadata update for Firefox store
+
+## Version 1.0
+- Initial Commit
